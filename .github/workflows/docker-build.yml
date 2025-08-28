@@ -104,6 +104,10 @@ jobs:
         echo "short_sha=${SHORT_SHA}" >> $GITHUB_OUTPUT
         echo "timestamp=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
+    - name: Debug
+      run: |
+         ls 
+         ls dist
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
