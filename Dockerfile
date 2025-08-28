@@ -1,7 +1,9 @@
 FROM alpine:latest
 
+RUN mkdir -p /opt/app
 
-COPY ./dist/ /opt/app
+COPY dist/ /opt/app/
+
 WORKDIR /opt/app
 # 设置文件权限
 RUN chmod +x /opt/app/file-transfer-go
